@@ -1,0 +1,140 @@
+h2{
+    color:white;
+    font-size: 80px;
+    display: inline-block;
+}
+
+body{
+    background-color: black;
+}
+
+hr{
+    color: white;
+    height: 3px;
+    background-color: white;
+    
+}
+.line{
+    width: 100%;
+    height: 125px;
+    box-sizing: border-box;
+    padding: 0 1.5%;
+}
+
+/*  */
+#first-line{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+#first-line>h2:last-child::after{
+    content: "S";
+}
+#first-line>h2:last-child:hover::after{
+    content: "$";
+}
+
+/*  */
+#second-line{
+    padding-left: 13.5%;    
+}
+#second-line>h2{
+    transition: 0.5s;
+}
+#second-line>h2:hover{
+    transition: 0.5s;
+    rotate:180deg;
+    transform-origin: center center;
+}
+
+/*  */
+#third-line{
+    position: relative;
+}
+
+#third-line>h2{
+    padding-right: 2.5%;
+    position: absolute;
+    transition: 0.5s;
+    right:0%;
+}
+
+#third-line>h2:hover{
+    animation: blink 0.4s infinite;
+}
+
+@keyframes blink {
+    from{opacity:0;}
+
+    to{opacity: 1;}
+}
+
+/*  */
+#fourth-line>h2{
+    padding-left:4.5%;
+    transition: 0.5s;
+}
+#fourth-line>h2:hover{
+    transition: 0.5s;
+    padding-left: 20%;
+}
+
+/*  */
+#fifth-line>h2{
+    position: absolute;
+    right: 10%;
+    z-index: 1;
+}
+
+#fifth-line>h2:hover::after{
+    position: absolute;
+    bottom: 125%;
+    right: 0%;
+    content: "OPENCALL";
+}
+#fifth-line>h2:hover::before{
+    content: "OPENCALL";
+    position: absolute;
+    top: 125%;
+    right: 0%;
+}
+
+/*  */
+
+#sixth-line>h2{
+    padding-left: 6.64%;
+    transition: 0.5s;
+}
+
+#sixth-line>h2:hover{
+    transition: 0.5s;
+    scale: 70%;
+}
+
+/*  */
+
+#seventh-line{
+    padding-left: 45%;
+}
+#seventh-line>h2{
+    position: relative;
+}
+#seventh-line>h2:hover::before{
+    content: "✆";
+    position: absolute;
+    left:-20%;
+    animation: rolling 1s;
+    transition: 1s;
+}
+
+@keyframes rolling{
+    from{
+       left:-500%;
+       rotate: 1080deg;
+    }
+    to{
+        left:-20%;
+        rotate: 0deg;
+    }
+}
+
