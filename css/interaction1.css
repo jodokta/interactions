@@ -123,8 +123,8 @@ hr{
     content: "✆";
     position: absolute;
     left:-20%;
-    animation: rolling 1s;
-    transition: 1s;
+    animation: rolling 1s alternate;
+    animation-fill-mode: backwards;
 }
 
 @keyframes rolling{
